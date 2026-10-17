@@ -70,20 +70,22 @@ h2 { font-weight: 500; letter-spacing: -.022em; }
 h3 { font-weight: 600; letter-spacing: -.015em; }
 p { margin: 0; }
 a { color: inherit; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
+picture { display: block; min-width: 0; }
+.shots picture, .gal picture, .hero-shot picture { height: 100%; }
 
 .wrap {
   width: 100%; max-width: 1180px; margin-inline: auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.pad { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.pad { padding-block: clamp(1.9rem, 3.4vw, 3rem); }
 
 .eyebrow {
   font-family: var(--sans); font-size: .7rem; font-weight: 700;
   letter-spacing: .2em; text-transform: uppercase; color: var(--gold);
 }
-.sec-head { display: grid; gap: 1rem; max-width: 56ch; margin-bottom: clamp(2.2rem, 4vw, 3.4rem); }
+.sec-head { display: grid; gap: 1rem; max-width: 56ch; margin-bottom: clamp(1.2rem, 2vw, 1.7rem); }
 .sec-head h2 { font-size: clamp(2.1rem, 4.6vw, 2.85rem); }
 .sec-head p { color: var(--ink-soft); font-size: 1.04rem; }
 
@@ -142,9 +144,9 @@ img { display: block; max-width: 100%; }
 :focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
 
 /* ---------- hero ---------- */
-.hero { display: grid; grid-template-columns: 1fr; gap: clamp(2.2rem, 5vw, 3.6rem); align-items: center; }
+.hero { display: grid; grid-template-columns: 1fr; gap: clamp(1.6rem, 3vw, 2.6rem); align-items: center; }
 @media (min-width: 940px) { .hero { grid-template-columns: 1fr 1.04fr; } }
-.hero-copy { display: grid; gap: 1.5rem; min-width: 0; }
+.hero-copy { display: grid; gap: 1.15rem; min-width: 0; }
 .hero h1 { font-size: clamp(2.7rem, 7vw, 4.6rem); }
 .hero h1 em { font-style: normal; color: var(--coral); }
 .lede { font-size: clamp(1.04rem, 1.5vw, 1.15rem); color: var(--ink-soft); max-width: 46ch; }
@@ -156,14 +158,13 @@ img { display: block; max-width: 100%; }
   background: var(--glass); border: 1px solid var(--glass-line);
 }
 .hero-shot { position: relative; min-width: 0; }
-.hero-shot > img {
-  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
-  border-radius: var(--r-xl); box-shadow: var(--sh-deep);
+.hero-shot img {
+  width: 100%; border-radius: var(--r-xl); box-shadow: var(--sh-deep);
   border: 1px solid var(--glass-line);
 }
 .hero-tag {
-  position: absolute; left: 0; bottom: 0; transform: translate(-6%, 30%);
-  padding: 1rem 1.2rem; display: grid; gap: .2rem; max-width: 66%;
+  position: absolute; left: 0; bottom: 0; transform: translate(-5%, 38%);
+  padding: .9rem 1.1rem; display: grid; gap: .2rem; max-width: 64%;
   background: var(--glass-strong); border: 1px solid var(--glass-line);
   border-radius: var(--r-md); box-shadow: var(--sh-glass);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
@@ -180,17 +181,15 @@ img { display: block; max-width: 100%; }
 .fact span { font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
 
 /* ---------- split sections ---------- */
-.split { display: grid; grid-template-columns: 1fr; gap: clamp(1.8rem, 4vw, 3.2rem); align-items: center; }
+.split { display: grid; grid-template-columns: 1fr; gap: clamp(1.2rem, 2.4vw, 2rem); align-items: center; }
 @media (min-width: 940px) { .split { grid-template-columns: 7fr 5fr; } .split--flip > :first-child { order: 2; } }
-.shots { display: grid; gap: .9rem; min-width: 0; }
+.shots { display: grid; gap: .7rem; min-width: 0; align-items: start; }
+.shots--solo { max-width: 330px; margin-inline: auto; }
 .shots--duo { grid-template-columns: 1fr 1fr; }
 .shots img {
-  width: 100%; height: 100%; object-fit: cover;
-  border-radius: var(--r-lg); box-shadow: var(--sh-soft);
+  width: 100%; border-radius: var(--r-lg); box-shadow: var(--sh-soft);
   border: 1px solid var(--glass-line);
 }
-.shots--duo img { aspect-ratio: 3 / 4; }
-.shots--solo img { aspect-ratio: 4 / 3; }
 
 .panel { padding: clamp(1.6rem, 3vw, 2.2rem); border-radius: var(--r-lg); }
 .ticks { display: grid; gap: .8rem; margin: 0; padding: 0; list-style: none; }
@@ -203,17 +202,17 @@ img { display: block; max-width: 100%; }
 }
 
 /* ---------- gallery ---------- */
-.gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
-@media (min-width: 760px) { .gal { grid-template-columns: repeat(3, 1fr); } }
-.gal figure { margin: 0; display: grid; gap: .5rem; min-width: 0; }
+.gal { column-count: 2; column-gap: .7rem; }
+@media (min-width: 760px) { .gal { column-count: 3; } }
+.gal figure { margin: 0 0 .7rem; break-inside: avoid; display: grid; gap: .4rem; }
 .gal button {
   display: block; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%;
   border-radius: var(--r-lg); transition: transform .18s ease;
 }
 .gal button:hover { transform: translateY(-3px); }
 .gal img {
-  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
-  border-radius: var(--r-lg); box-shadow: var(--sh-soft); border: 1px solid var(--glass-line);
+  width: 100%; border-radius: var(--r-lg);
+  box-shadow: var(--sh-soft); border: 1px solid var(--glass-line);
 }
 .gal figcaption { font-size: .78rem; color: var(--ink-soft); padding-left: .3rem; }
 
@@ -239,7 +238,7 @@ img { display: block; max-width: 100%; }
 /* ---------- steps ---------- */
 .steps { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-.step { padding: 1.8rem 1.5rem; border-radius: var(--r-lg); display: grid; gap: .55rem; }
+.step { padding: 1.4rem 1.3rem; border-radius: var(--r-lg); display: grid; gap: .55rem; }
 .step .num {
   width: 2.1rem; height: 2.1rem; border-radius: 999px; display: grid; place-items: center;
   background: var(--gold-soft); color: var(--ink); font-family: var(--serif);
@@ -247,6 +246,20 @@ img { display: block; max-width: 100%; }
 }
 .step h3 { font-size: 1.32rem; }
 .step p { font-size: .94rem; color: var(--ink-soft); }
+
+.avail { display: grid; grid-template-columns: 1fr; gap: 1.4rem; padding: clamp(1.5rem, 3vw, 2.1rem); border-radius: var(--r-lg); }
+@media (min-width: 820px) { .avail { grid-template-columns: 1fr 1.25fr; align-items: center; } }
+.avail-lead { display: grid; gap: .5rem; }
+.avail-lead b { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
+.avail-lead p { font-size: .93rem; color: var(--ink-soft); }
+.avail-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+@media (min-width: 560px) { .avail-grid { grid-template-columns: 1fr 1fr; column-gap: 1.6rem; } }
+.avail-grid div {
+  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
+  padding: .62rem 0; border-bottom: 1px solid var(--hairline); font-size: .92rem;
+}
+.avail-grid dt, .avail-grid span:first-child { color: var(--ink); font-weight: 600; }
+.avail-grid span:last-child { color: var(--ink-soft); text-align: right; }
 
 /* ---------- faq ---------- */
 .faq { max-width: 74ch; border-radius: var(--r-lg); overflow: hidden; }
@@ -314,7 +327,7 @@ textarea { resize: vertical; min-height: 5.4rem; }
 
 /* ---------- footer ---------- */
 .foot { border-top: 1px solid var(--hairline); margin-top: 1rem; }
-.foot-in { padding-block: 2.8rem; display: grid; gap: 1.2rem; font-size: .87rem; color: var(--ink-soft); }
+.foot-in { padding-block: 2rem; display: grid; gap: 1.2rem; font-size: .87rem; color: var(--ink-soft); }
 @media (min-width: 820px) { .foot-in { grid-template-columns: 1.3fr 1fr; align-items: start; } }
 .foot b { color: var(--ink); font-family: var(--serif); font-size: 1.14rem; font-weight: 600; }
 .fineprint { font-size: .79rem; max-width: 56ch; }
@@ -335,6 +348,7 @@ textarea { resize: vertical; min-height: 5.4rem; }
       <a href="#rooms">The room</a>
       <a href="#shared">Shared spaces</a>
       <a href="#gallery">Photos</a>
+      <a href="#availability">Availability</a>
       <a href="#faq">Questions</a>
     </nav>
     <a class="btn btn--coral" href="#contact">Ask about a room</a>
@@ -360,7 +374,7 @@ textarea { resize: vertical; min-height: 5.4rem; }
         </div>
       </div>
       <div class="hero-shot">
-        <img src="img/photo_008.jpg" alt="A furnished room with a single bed, a desk and chair, and a blinded window.">
+        <picture><source srcset="img/photo_008.webp" type="image/webp"><img src="img/photo_008.jpg" alt="A furnished room with a single bed, a desk and chair, and a blinded window." width="1800" height="1350" fetchpriority="high" decoding="async"></picture>
         <div class="hero-tag">
           <b>Bring your clothes and a laptop</b>
           <span>The bed, mattress, desk and chair are already waiting in the room.</span>
@@ -389,8 +403,8 @@ textarea { resize: vertical; min-height: 5.4rem; }
       </div>
       <div class="split">
         <div class="shots shots--duo">
-          <img src="img/photo_001.jpg" alt="A room with a single bed, a side table and a folding chair.">
-          <img src="img/photo_002.jpg" alt="The shared dining area, with tenant fridges along the wall and a table set up to work at.">
+          <picture><source srcset="img/photo_001.webp" type="image/webp"><img src="img/photo_001.jpg" alt="A room with a single bed, a side table and a folding chair." width="1350" height="1800" loading="lazy" decoding="async"></picture>
+          <picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="The shared dining area, with tenant fridges along the wall and a table set up to work at." width="1800" height="1350" loading="lazy" decoding="async"></picture>
         </div>
         <div class="panel glass">
           <ul class="ticks">
@@ -415,8 +429,8 @@ textarea { resize: vertical; min-height: 5.4rem; }
       </div>
       <div class="split split--flip">
         <div class="shots shots--duo">
-          <img src="img/photo_005.jpg" alt="The shared galley kitchen with a gas range, microwave and a large stainless fridge.">
-          <img src="img/photo_004.jpg" alt="A sitting room with rattan sofas and a glass-topped coffee table.">
+          <picture><source srcset="img/photo_005.webp" type="image/webp"><img src="img/photo_005.jpg" alt="The shared galley kitchen with a gas range, microwave and a large stainless fridge." width="1800" height="1350" loading="lazy" decoding="async"></picture>
+          <picture><source srcset="img/photo_004.webp" type="image/webp"><img src="img/photo_004.jpg" alt="A sitting room with rattan sofas and a glass-topped coffee table." width="1350" height="1800" loading="lazy" decoding="async"></picture>
         </div>
         <div class="panel glass">
           <ul class="ticks">
@@ -449,7 +463,7 @@ textarea { resize: vertical; min-height: 5.4rem; }
         </div>
       </div>
       <div class="shots shots--solo">
-        <img src="img/photo_003.jpg" alt="The tiled walk-in shower room, with a glass block window and a new vanity.">
+        <picture><source srcset="img/photo_003.webp" type="image/webp"><img src="img/photo_003.jpg" alt="The tiled walk-in shower room, with a glass block window and a new vanity." width="1350" height="1800" loading="lazy" decoding="async"></picture>
       </div>
     </div>
   </section>
@@ -462,15 +476,15 @@ textarea { resize: vertical; min-height: 5.4rem; }
         <p>Every photo below is of this building. Nothing here is a stock image.</p>
       </div>
       <div class="gal">
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_008.jpg" alt="A furnished room with a bed, desk and window."></button><figcaption>Room with desk and bed</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_001.jpg" alt="A room with a single bed, side table and chair."></button><figcaption>Room, made up and ready</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_005.jpg" alt="Galley kitchen with gas range and stainless fridge."></button><figcaption>Shared kitchen</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table."></button><figcaption>Dining and fridge area</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_004.jpg" alt="Sitting room with rattan sofa and chairs."></button><figcaption>First sitting room</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor."></button><figcaption>Second sitting room</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_003.jpg" alt="Bathroom with a tiled walk-in shower and glass block window."></button><figcaption>Tiled shower room</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer."></button><figcaption>Separate toilet</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling."></button><figcaption>Camera on the shared entry</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_008.webp" type="image/webp"><img src="img/photo_008.jpg" alt="A furnished room with a bed, desk and window." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Room with desk and bed</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_001.webp" type="image/webp"><img src="img/photo_001.jpg" alt="A room with a single bed, side table and chair." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Room, made up and ready</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_005.webp" type="image/webp"><img src="img/photo_005.jpg" alt="Galley kitchen with gas range and stainless fridge." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Shared kitchen</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Dining and fridge area</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_004.webp" type="image/webp"><img src="img/photo_004.jpg" alt="Sitting room with rattan sofa and chairs." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>First sitting room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_006.webp" type="image/webp"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Second sitting room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_003.webp" type="image/webp"><img src="img/photo_003.jpg" alt="Bathroom with a tiled walk-in shower and glass block window." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Tiled shower room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_007.webp" type="image/webp"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Separate toilet</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_009.webp" type="image/webp"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Camera on the shared entry</figcaption></figure>
       </div>
     </div>
   </section>
@@ -496,6 +510,29 @@ textarea { resize: vertical; min-height: 5.4rem; }
           <span class="num">3</span>
           <h3>Move in</h3>
           <p>The room is already furnished, so once the paperwork is signed you can move in straight away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="availability">
+    <div class="wrap">
+      <!-- Replace the "Ask when you call" values below with the owner's real
+           figures once confirmed. Rate is the highest-value one to fill in. -->
+      <div class="avail glass">
+        <div class="avail-lead">
+          <span class="eyebrow">Rooms and availability</span>
+          <b>Enquire for current availability.</b>
+          <p>Rooms differ in size, and what is free changes week to week. The details below are confirmed on the call so you get the figures for the actual room you would be taking.</p>
+          <div><a class="btn btn--coral" href="#contact">Ask what's available</a></div>
+        </div>
+        <div class="avail-grid">
+          <div><span>Rate</span><span>Ask when you call</span></div>
+          <div><span>What it covers</span><span>Ask when you call</span></div>
+          <div><span>Minimum stay</span><span>Ask when you call</span></div>
+          <div><span>Deposit</span><span>Ask when you call</span></div>
+          <div><span>Available from</span><span>Ask when you call</span></div>
+          <div><span>Furnishings</span><span>Included</span></div>
         </div>
       </div>
     </div>

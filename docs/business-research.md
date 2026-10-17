@@ -165,3 +165,37 @@ image bleeding in along its left edge, which is visible at full size.
 The nine real photographs of the actual property are higher resolution
 (1800px long edge), genuinely show what is being rented, and cost nothing in
 credibility. They remain the better asset.
+
+## 10. Revision 2
+
+Changes after review:
+
+- **Aesthetic** rebuilt on the Oasis Massage Studio reference the client gave:
+  Cormorant Garamond over Inter, warm cream gradient ground, glass panels at
+  28-40px radii, pill buttons, gold eyebrows, coral CTA, soft warm shadows.
+- **No cropping.** All `object-fit: cover` and forced aspect ratios removed, so
+  every photograph shows in full. The gallery is CSS columns so mixed portrait
+  and landscape tile without gaps. The single portrait feature is width-capped
+  rather than cropped.
+- **Spacing tightened.** Section padding cut from a 7rem maximum to 3rem.
+  Desktop page height fell from 12851px to 7227px, mobile 18066px to 9476px.
+- **Images regraded and converted.** Brightness +8%, contrast +3%, applied
+  uniformly. No white balance: grey-world would have stripped the sage wall
+  colour, which is a real feature of the house. WebP added with JPEG fallback
+  via `<picture>`, saving 49% (2511KB to 1281KB). Intrinsic width and height on
+  every image to stop layout shift, lazy loading below the fold,
+  `fetchpriority="high"` on the hero.
+- **Availability section added** with the structure for rate, coverage, minimum
+  stay, deposit and start date, each reading "Ask when you call" until the owner
+  confirms real figures. An HTML comment marks the block for replacement.
+
+Verified headless at 1440px and 390px: no horizontal overflow, 15/15 images
+resolve, all served as WebP, no console errors.
+
+### Still outstanding
+
+- No real rate anywhere. Still the single biggest gap.
+- Enquiry form composes a message for the visitor to send; it does not transmit.
+  Needs the owner's email or a form endpoint, plus a privacy notice.
+- No exterior photograph of the building.
+- No pre-renovation photographs, so no before/after comparison is possible.
