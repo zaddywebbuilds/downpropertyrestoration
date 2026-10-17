@@ -199,3 +199,21 @@ resolve, all served as WebP, no console errors.
   Needs the owner's email or a form endpoint, plus a privacy notice.
 - No exterior photograph of the building.
 - No pre-renovation photographs, so no before/after comparison is possible.
+
+## 11. Revision 3
+
+Each of the nine photographs now appears exactly once on the page. Previously
+six of them ran twice, once in a section and again in the gallery.
+
+Current placement, one photo per slot:
+
+| Slot | Photo |
+|---|---|
+| Hero | 008 room with desk and bed |
+| The room | 001 bedroom |
+| Shared spaces | 005 kitchen, 004 first sitting room |
+| Looked after | 003 tiled shower room |
+| Gallery | 002 dining and fridges, 006 second sitting room, 007 separate toilet, 009 entry camera |
+
+Desktop page height is now 6699px, down from 12851px before the spacing and
+cropping work. Mobile is 9186px, down from 18066px.

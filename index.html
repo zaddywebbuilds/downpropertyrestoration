@@ -184,7 +184,7 @@ picture { display: block; min-width: 0; }
 .split { display: grid; grid-template-columns: 1fr; gap: clamp(1.2rem, 2.4vw, 2rem); align-items: center; }
 @media (min-width: 940px) { .split { grid-template-columns: 7fr 5fr; } .split--flip > :first-child { order: 2; } }
 .shots { display: grid; gap: .7rem; min-width: 0; align-items: start; }
-.shots--solo { max-width: 330px; margin-inline: auto; }
+.shots--solo { max-width: 400px; margin-inline: auto; }
 .shots--duo { grid-template-columns: 1fr 1fr; }
 .shots img {
   width: 100%; border-radius: var(--r-lg); box-shadow: var(--sh-soft);
@@ -402,9 +402,8 @@ textarea { resize: vertical; min-height: 5.4rem; }
         <p>Every room comes with a bed frame and mattress, a desk and chair, a window with blinds, overhead lighting and a smoke alarm. There is nothing to buy before you move in.</p>
       </div>
       <div class="split">
-        <div class="shots shots--duo">
+        <div class="shots shots--solo">
           <picture><source srcset="img/photo_001.webp" type="image/webp"><img src="img/photo_001.jpg" alt="A room with a single bed, a side table and a folding chair." width="1350" height="1800" loading="lazy" decoding="async"></picture>
-          <picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="The shared dining area, with tenant fridges along the wall and a table set up to work at." width="1800" height="1350" loading="lazy" decoding="async"></picture>
         </div>
         <div class="panel glass">
           <ul class="ticks">
@@ -472,17 +471,12 @@ textarea { resize: vertical; min-height: 5.4rem; }
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Photos</span>
-        <h2>The whole house, room by room.</h2>
-        <p>Every photo below is of this building. Nothing here is a stock image.</p>
+        <h2>The rest of the house.</h2>
+        <p>Every photograph on this page is of this building. Nothing here is a stock image.</p>
       </div>
       <div class="gal">
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_008.webp" type="image/webp"><img src="img/photo_008.jpg" alt="A furnished room with a bed, desk and window." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Room with desk and bed</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_001.webp" type="image/webp"><img src="img/photo_001.jpg" alt="A room with a single bed, side table and chair." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Room, made up and ready</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_005.webp" type="image/webp"><img src="img/photo_005.jpg" alt="Galley kitchen with gas range and stainless fridge." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Shared kitchen</figcaption></figure>
         <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Dining and fridge area</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_004.webp" type="image/webp"><img src="img/photo_004.jpg" alt="Sitting room with rattan sofa and chairs." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>First sitting room</figcaption></figure>
         <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_006.webp" type="image/webp"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Second sitting room</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_003.webp" type="image/webp"><img src="img/photo_003.jpg" alt="Bathroom with a tiled walk-in shower and glass block window." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Tiled shower room</figcaption></figure>
         <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_007.webp" type="image/webp"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Separate toilet</figcaption></figure>
         <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_009.webp" type="image/webp"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Camera on the shared entry</figcaption></figure>
       </div>
