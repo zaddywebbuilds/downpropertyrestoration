@@ -237,9 +237,17 @@ picture { display: block; min-width: 0; }
 }
 
 /* ---------- gallery ---------- */
-.gal { column-count: 2; column-gap: .7rem; }
-@media (min-width: 760px) { .gal { column-count: 3; } }
-.gal figure { margin: 0 0 .7rem; break-inside: avoid; display: grid; gap: .4rem; }
+.gal { display: flex; flex-wrap: wrap; gap: .7rem; }
+.gal figure {
+  margin: 0; display: grid; gap: .4rem; align-content: start;
+  flex: var(--a) 1 calc(var(--a) * 190px);
+  min-width: min(100%, 148px);
+}
+/* on phones a smaller basis makes it two flush rows of two, rather than a
+   full-width stack (too tall) or a 1 + 2 + 1 split (leaves a stub row) */
+@media (max-width: 619px) {
+  .gal figure { flex-basis: calc(var(--a) * 140px); min-width: 0; }
+}
 .gal button {
   display: block; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%;
   border-radius: var(--r-lg); transition: transform .18s ease;
@@ -435,7 +443,7 @@ textarea { resize: vertical; min-height: 5.4rem; }
         </div>
       </div>
       <div class="hero-shot">
-        <picture><source srcset="img/photo_008.webp" type="image/webp"><img src="img/photo_008.jpg" alt="A furnished room with a single bed, a desk and chair, and a blinded window." width="1800" height="1350" fetchpriority="high" decoding="async"></picture>
+        <picture><source srcset="img/hero-villa.webp" type="image/webp"><img src="img/hero-villa.jpg" alt="A modern house lit from within at dusk." width="1200" height="800" fetchpriority="high" decoding="async"></picture>
         <div class="hero-tag">
           <b>Bring your clothes and a laptop</b>
           <span>The bed, mattress, desk and chair are already waiting in the room.</span>
@@ -533,13 +541,14 @@ textarea { resize: vertical; min-height: 5.4rem; }
       <div class="sec-head">
         <span class="eyebrow">Photos</span>
         <h2>The rest of the house.</h2>
-        <p>Every photograph of the house is of this building. Nothing in these rooms is a stock image.</p>
+        <p>Every photograph of the rooms and shared spaces is of this building.</p>
       </div>
       <div class="gal">
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Dining and fridge area</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_006.webp" type="image/webp"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Second sitting room</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_007.webp" type="image/webp"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Separate toilet</figcaption></figure>
-        <figure><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_009.webp" type="image/webp"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Camera on the shared entry</figcaption></figure>
+        <figure style="--a:1.333"><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_002.webp" type="image/webp"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Dining and fridge area</figcaption></figure>
+        <figure style="--a:.75"><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_006.webp" type="image/webp"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Second sitting room</figcaption></figure>
+        <figure style="--a:.75"><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_007.webp" type="image/webp"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Separate toilet</figcaption></figure>
+        <figure style="--a:.75"><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_009.webp" type="image/webp"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling." width="1350" height="1800" loading="lazy" decoding="async"></picture></button><figcaption>Camera on the shared entry</figcaption></figure>
+        <figure style="--a:1.333"><button type="button" aria-label="Open larger photo"><picture><source srcset="img/photo_008.webp" type="image/webp"><img src="img/photo_008.jpg" alt="A furnished room with a single bed, a desk and chair, and a blinded window." width="1800" height="1350" loading="lazy" decoding="async"></picture></button><figcaption>Room with desk and bed</figcaption></figure>
       </div>
     </div>
   </section>

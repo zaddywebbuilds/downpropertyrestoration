@@ -296,3 +296,43 @@ regenerating those images at roughly 1200px wide removes the compromise.
 
 **The nine photographs of the house are not upscaled.** They are 1350-1800px
 native and never display above that.
+
+## 14. Revision 5: gallery and hero
+
+### Gallery now justified
+
+CSS columns left a ragged bottom: one tall portrait stretched a column while the
+others ended early. The gallery is now justified rows, where flex-grow and
+flex-basis both scale with each image aspect ratio, so images in a row land on
+the same height and the row ends flush. Nothing is cropped.
+
+Desktop is one flush row of five. Phones use a smaller basis so it becomes two
+rows of two plus a full-width last image, instead of a stack (too tall) or a
+1 + 2 + 1 split (leaves a stub).
+
+### Hero image changed, at the owner request
+
+The hero is now img/hero-villa.jpg, cropped to 1200x800 from a portrait source.
+The room photograph that used to be the hero moved into the gallery, so each of
+the nine house photographs still appears exactly once.
+
+**Provenance, recorded deliberately.** This image is not 942 Howard Ave. It
+shows a modern hillside house with palm trees and an infinity pool, which does
+not exist in Windsor, Ontario. The source file was
+Downloads/pinvideosaver_l0ozs1sg.jpg, saved from Pinterest through a downloader,
+so the copyright holder is unknown and no licence has been obtained.
+
+Three concerns were raised before this change and the owner chose to proceed:
+
+1. The hero slot reads as the property being rented.
+2. Unknown rights holder, which is a licensing exposure on a commercial site.
+3. Portrait source in a landscape slot, so it required the cropping that was
+   otherwise ruled out.
+
+To reverse it, point the hero picture element back at photo_008 and remove the
+duplicate gallery figure.
+
+The authenticity line was narrowed again to match: it now reads "Every
+photograph of the rooms and shared spaces is of this building", which stays
+true with a non-property hero. The Open Graph preview image is still the real
+room photograph, not the villa.
