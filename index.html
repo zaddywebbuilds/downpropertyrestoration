@@ -1,0 +1,741 @@
+<title>Dawn Property Restoration</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- Remove this robots tag once the owner approves the site for launch. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Furnished rooms to rent at 942 Howard Ave, Windsor, Ontario. Private rooms with a bed, desk and storage, a shared kitchen, two lounges and a newly renovated interior throughout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+
+<style>
+/* Layout: warm cream ground, glass panels floating on it, generous radii.
+   Alternating bands in one column; photo sections run 7/5 and stack on phones.
+   Palette and type follow the Oasis reference, with sage carried in from the
+   colour this house is actually painted. */
+:root {
+  --cream:      #FDF4E8;
+  --cream-deep: #F4E5D0;
+  --blush:      #FBE0CF;
+  --peach:      #F8D4BB;
+  --ink:        #2A1F1A;
+  --ink-soft:   #5C4A3F;
+  --gold:       #B2914A;
+  --gold-soft:  #E0C98A;
+  --coral:      #E5664A;
+  --coral-lift: #FF8C72;
+  --sage:       #6F8060;
+
+  --glass:        rgba(255, 255, 255, .58);
+  --glass-strong: rgba(255, 255, 255, .80);
+  --glass-line:   rgba(255, 255, 255, .85);
+  --hairline:     rgba(92, 74, 63, .16);
+
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+
+  --sh-soft:  0 8px 24px rgba(120, 70, 50, .10);
+  --sh-glass: 0 12px 36px rgba(160, 100, 70, .18);
+  --sh-deep:  0 30px 80px rgba(180, 110, 80, .28);
+
+  --serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+[id] { scroll-margin-top: 6rem; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  background: var(--cream-deep);
+  background-image:
+    radial-gradient(1100px 620px at 12% -8%, var(--cream) 0%, rgba(253,244,232,0) 62%),
+    radial-gradient(900px 560px at 92% 4%, var(--blush) 0%, rgba(251,224,207,0) 58%),
+    radial-gradient(1000px 700px at 50% 108%, var(--peach) 0%, rgba(248,212,187,0) 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--serif); margin: 0; line-height: 1.08; text-wrap: balance; }
+h1 { font-weight: 600; letter-spacing: -.03em; }
+h2 { font-weight: 500; letter-spacing: -.022em; }
+h3 { font-weight: 600; letter-spacing: -.015em; }
+p { margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+
+.wrap {
+  width: 100%; max-width: 1180px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.pad { padding-block: clamp(3.5rem, 8vw, 7rem); }
+
+.eyebrow {
+  font-family: var(--sans); font-size: .7rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--gold);
+}
+.sec-head { display: grid; gap: 1rem; max-width: 56ch; margin-bottom: clamp(2.2rem, 4vw, 3.4rem); }
+.sec-head h2 { font-size: clamp(2.1rem, 4.6vw, 2.85rem); }
+.sec-head p { color: var(--ink-soft); font-size: 1.04rem; }
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* ---------- header ---------- */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+  padding-block: .7rem;
+  background: rgba(253, 244, 232, .78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--hairline);
+}
+.head-in { display: flex; align-items: center; gap: 1.25rem; }
+.brand { margin-right: auto; display: grid; gap: .12rem; min-width: 0; }
+.brand b {
+  font-family: var(--serif); font-weight: 600; font-size: 1.16rem;
+  letter-spacing: -.015em; line-height: 1.1;
+}
+.brand span {
+  font-size: .62rem; font-weight: 700; letter-spacing: .19em;
+  text-transform: uppercase; color: var(--gold);
+}
+.nav { display: flex; gap: .3rem; }
+.nav a {
+  text-decoration: none; font-size: .84rem; font-weight: 600; color: var(--ink-soft);
+  padding: .48rem .9rem; border-radius: 999px; transition: background .16s ease, color .16s ease;
+}
+.nav a:hover { background: var(--glass-strong); color: var(--ink); }
+@media (max-width: 900px) { .nav { display: none; } }
+@media (max-width: 520px) {
+  .brand b { font-size: 1rem; }
+  .brand span { display: none; }
+  .btn { padding: .7rem 1.1rem; font-size: .85rem; }
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+  font-family: var(--sans); font-size: .9rem; font-weight: 600;
+  padding: .78rem 1.4rem; border-radius: 999px; border: 1px solid transparent;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.btn--coral { background: var(--coral); color: #FFF8F3; box-shadow: var(--sh-soft); }
+.btn--coral:hover { background: var(--coral-lift); transform: translateY(-1px); box-shadow: var(--sh-glass); }
+.btn--glass { background: var(--glass-strong); color: var(--ink); border-color: var(--glass-line); box-shadow: var(--sh-soft); }
+.btn--glass:hover { transform: translateY(-1px); box-shadow: var(--sh-glass); }
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; grid-template-columns: 1fr; gap: clamp(2.2rem, 5vw, 3.6rem); align-items: center; }
+@media (min-width: 940px) { .hero { grid-template-columns: 1fr 1.04fr; } }
+.hero-copy { display: grid; gap: 1.5rem; min-width: 0; }
+.hero h1 { font-size: clamp(2.7rem, 7vw, 4.6rem); }
+.hero h1 em { font-style: normal; color: var(--coral); }
+.lede { font-size: clamp(1.04rem, 1.5vw, 1.15rem); color: var(--ink-soft); max-width: 46ch; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .7rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  font-size: .76rem; font-weight: 600; color: var(--ink-soft);
+  padding: .4rem .85rem; border-radius: 999px;
+  background: var(--glass); border: 1px solid var(--glass-line);
+}
+.hero-shot { position: relative; min-width: 0; }
+.hero-shot > img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: var(--r-xl); box-shadow: var(--sh-deep);
+  border: 1px solid var(--glass-line);
+}
+.hero-tag {
+  position: absolute; left: 0; bottom: 0; transform: translate(-6%, 30%);
+  padding: 1rem 1.2rem; display: grid; gap: .2rem; max-width: 66%;
+  background: var(--glass-strong); border: 1px solid var(--glass-line);
+  border-radius: var(--r-md); box-shadow: var(--sh-glass);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.hero-tag b { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; }
+.hero-tag span { font-size: .8rem; color: var(--ink-soft); line-height: 1.45; }
+@media (max-width: 620px) { .hero-tag { position: static; transform: none; margin-top: 1rem; max-width: none; } }
+
+/* ---------- facts ---------- */
+.facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+@media (min-width: 820px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+.fact { padding: 1.5rem 1.3rem; display: grid; gap: .3rem; border-radius: var(--r-md); }
+.fact b { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; letter-spacing: -.012em; }
+.fact span { font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
+
+/* ---------- split sections ---------- */
+.split { display: grid; grid-template-columns: 1fr; gap: clamp(1.8rem, 4vw, 3.2rem); align-items: center; }
+@media (min-width: 940px) { .split { grid-template-columns: 7fr 5fr; } .split--flip > :first-child { order: 2; } }
+.shots { display: grid; gap: .9rem; min-width: 0; }
+.shots--duo { grid-template-columns: 1fr 1fr; }
+.shots img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: var(--r-lg); box-shadow: var(--sh-soft);
+  border: 1px solid var(--glass-line);
+}
+.shots--duo img { aspect-ratio: 3 / 4; }
+.shots--solo img { aspect-ratio: 4 / 3; }
+
+.panel { padding: clamp(1.6rem, 3vw, 2.2rem); border-radius: var(--r-lg); }
+.ticks { display: grid; gap: .8rem; margin: 0; padding: 0; list-style: none; }
+.ticks li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .75rem; align-items: start; font-size: .97rem; }
+.ticks svg { width: 1.4rem; height: 1.4rem; margin-top: .22rem; color: var(--sage); }
+.note {
+  margin-top: 1.4rem; padding: .95rem 1.15rem; border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, .62); border: 1px solid var(--glass-line);
+  font-size: .9rem; color: var(--ink-soft);
+}
+
+/* ---------- gallery ---------- */
+.gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+@media (min-width: 760px) { .gal { grid-template-columns: repeat(3, 1fr); } }
+.gal figure { margin: 0; display: grid; gap: .5rem; min-width: 0; }
+.gal button {
+  display: block; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%;
+  border-radius: var(--r-lg); transition: transform .18s ease;
+}
+.gal button:hover { transform: translateY(-3px); }
+.gal img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: var(--r-lg); box-shadow: var(--sh-soft); border: 1px solid var(--glass-line);
+}
+.gal figcaption { font-size: .78rem; color: var(--ink-soft); padding-left: .3rem; }
+
+.lb {
+  position: fixed; inset: 0; z-index: 90;
+  background: rgba(42, 31, 26, .93);
+  display: grid; grid-template-rows: 1fr auto; gap: 1rem;
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+.lb img { margin: auto; max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--r-md); }
+.lb-bar { display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; color: var(--cream); }
+.lb-cap { font-size: .85rem; opacity: .88; margin-inline: .4rem; }
+.lb-bar button {
+  font: inherit; font-size: .86rem; font-weight: 600; color: var(--cream);
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px; padding: .5rem 1.1rem; cursor: pointer;
+}
+.lb-bar button:hover { background: rgba(255,255,255,.22); }
+
+/* ---------- steps ---------- */
+.steps { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.step { padding: 1.8rem 1.5rem; border-radius: var(--r-lg); display: grid; gap: .55rem; }
+.step .num {
+  width: 2.1rem; height: 2.1rem; border-radius: 999px; display: grid; place-items: center;
+  background: var(--gold-soft); color: var(--ink); font-family: var(--serif);
+  font-size: 1.05rem; font-weight: 700; margin-bottom: .3rem;
+}
+.step h3 { font-size: 1.32rem; }
+.step p { font-size: .94rem; color: var(--ink-soft); }
+
+/* ---------- faq ---------- */
+.faq { max-width: 74ch; border-radius: var(--r-lg); overflow: hidden; }
+.faq details { border-bottom: 1px solid var(--hairline); }
+.faq details:last-child { border-bottom: 0; }
+.faq summary {
+  cursor: pointer; list-style: none; position: relative;
+  padding: 1.25rem 3.2rem 1.25rem 1.5rem;
+  font-family: var(--serif); font-size: 1.22rem; font-weight: 600; letter-spacing: -.012em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 1.6rem; top: 1.75rem;
+  width: .6rem; height: .6rem;
+  border-right: 2px solid var(--coral); border-bottom: 2px solid var(--coral);
+  transform: rotate(45deg); transition: transform .18s ease;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); top: 1.95rem; }
+.faq .ans { padding: 0 2rem 1.4rem 1.5rem; color: var(--ink-soft); font-size: .97rem; }
+
+/* ---------- contact ---------- */
+.contact { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 940px) { .contact { grid-template-columns: 1fr 1fr; } }
+.card { padding: clamp(1.7rem, 3vw, 2.4rem); border-radius: var(--r-lg); display: grid; gap: 1.2rem; align-content: start; }
+.phone-num {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(1.9rem, 5vw, 2.6rem); letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums; word-break: break-word; line-height: 1.1;
+}
+.phone-row { display: flex; flex-wrap: wrap; gap: .6rem; }
+.addr { font-style: normal; display: grid; gap: .35rem; font-size: .95rem; color: var(--ink-soft); }
+.addr b { color: var(--ink); font-weight: 600; font-size: 1rem; }
+.addr a { color: var(--coral); font-weight: 600; }
+
+form { display: grid; gap: .95rem; min-width: 0; }
+label { display: grid; gap: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+input, textarea {
+  font: inherit; font-size: .95rem; text-transform: none; letter-spacing: normal;
+  color: var(--ink); background: rgba(255,255,255,.78);
+  border: 1px solid var(--glass-line); border-radius: var(--r-sm);
+  padding: .72rem .85rem; width: 100%;
+}
+input::placeholder, textarea::placeholder { color: rgba(92,74,63,.52); }
+textarea { resize: vertical; min-height: 5.4rem; }
+.out {
+  border: 1px solid var(--glass-line); background: rgba(255,255,255,.7);
+  padding: 1rem 1.1rem; border-radius: var(--r-md); display: grid; gap: .8rem; font-size: .9rem;
+}
+.out p { color: var(--ink-soft); }
+.out pre {
+  margin: 0; white-space: pre-wrap; word-break: break-word;
+  font-family: var(--sans); font-size: .9rem; color: var(--ink);
+}
+
+.callfab {
+  position: fixed; z-index: 40;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  background: var(--coral); color: #FFF8F3;
+  font-family: var(--sans); font-size: .9rem; font-weight: 600;
+  padding: .85rem 1.4rem; border-radius: 999px; text-decoration: none;
+  box-shadow: var(--sh-deep); display: none;
+}
+@media (max-width: 900px) { .callfab { display: inline-flex; } }
+
+/* ---------- footer ---------- */
+.foot { border-top: 1px solid var(--hairline); margin-top: 1rem; }
+.foot-in { padding-block: 2.8rem; display: grid; gap: 1.2rem; font-size: .87rem; color: var(--ink-soft); }
+@media (min-width: 820px) { .foot-in { grid-template-columns: 1.3fr 1fr; align-items: start; } }
+.foot b { color: var(--ink); font-family: var(--serif); font-size: 1.14rem; font-weight: 600; }
+.fineprint { font-size: .79rem; max-width: 56ch; }
+.fineprint span { opacity: .84; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+</style>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <div class="brand">
+      <b>Dawn Property Restoration</b>
+      <span>Rooms to rent &middot; Windsor</span>
+    </div>
+    <nav class="nav">
+      <a href="#rooms">The room</a>
+      <a href="#shared">Shared spaces</a>
+      <a href="#gallery">Photos</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <a class="btn btn--coral" href="#contact">Ask about a room</a>
+  </div>
+</header>
+
+<main>
+  <section class="pad">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="eyebrow">942 Howard Ave &middot; Windsor, Ontario</span>
+        <h1>A furnished room in a house that was just <em>redone</em>.</h1>
+        <p class="lede">The bed, desk and storage are already in the room. The kitchen, lounges and bathrooms are shared, and the whole house has been renovated from the floors up.</p>
+        <div class="hero-cta">
+          <a class="btn btn--coral" href="#contact">Ask about a room</a>
+          <a class="btn btn--glass" href="#rooms">See what you get</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Furnished</span>
+          <span class="chip">Move-in ready</span>
+          <span class="chip">Shared kitchen</span>
+          <span class="chip">Private room</span>
+        </div>
+      </div>
+      <div class="hero-shot">
+        <img src="img/photo_008.jpg" alt="A furnished room with a single bed, a desk and chair, and a blinded window.">
+        <div class="hero-tag">
+          <b>Bring your clothes and a laptop</b>
+          <span>The bed, mattress, desk and chair are already waiting in the room.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact glass"><b>Private room</b><span>Your own room with a door that closes</span></div>
+        <div class="fact glass"><b>Shared kitchen</b><span>Gas range, microwave and fridge space of your own</span></div>
+        <div class="fact glass"><b>Two lounges</b><span>Somewhere to sit that isn't your room</span></div>
+        <div class="fact glass"><b>Newly renovated</b><span>New floors, paint, doors and blinds</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="rooms">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The room</span>
+        <h2>Furnished means furnished.</h2>
+        <p>Every room comes with a bed frame and mattress, a desk and chair, a window with blinds, overhead lighting and a smoke alarm. There is nothing to buy before you move in.</p>
+      </div>
+      <div class="split">
+        <div class="shots shots--duo">
+          <img src="img/photo_001.jpg" alt="A room with a single bed, a side table and a folding chair.">
+          <img src="img/photo_002.jpg" alt="The shared dining area, with tenant fridges along the wall and a table set up to work at.">
+        </div>
+        <div class="panel glass">
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Bed frame with a new mattress</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Desk and chair, set up to work or study at</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Window with blinds and an overhead light</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Smoke alarm fitted in the room</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Fridge space of your own in the common area</span></li>
+          </ul>
+          <p class="note">Rooms differ in size, and what is free changes week to week. Call to ask which rooms are open right now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="shared">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Shared spaces</span>
+        <h2>A full kitchen, two sitting rooms, and a bathroom split in two.</h2>
+        <p>The shower room and the toilet are separate rooms, so two people can get ready at once instead of queuing for one door.</p>
+      </div>
+      <div class="split split--flip">
+        <div class="shots shots--duo">
+          <img src="img/photo_005.jpg" alt="The shared galley kitchen with a gas range, microwave and a large stainless fridge.">
+          <img src="img/photo_004.jpg" alt="A sitting room with rattan sofas and a glass-topped coffee table.">
+        </div>
+        <div class="panel glass">
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Kitchen with a gas range, oven and microwave</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Large fridge and freezer space in the kitchen</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Two lounges and a dining table</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Tiled walk-in shower room</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Separate toilet, fitted with a bidet sprayer</span></li>
+          </ul>
+          <p class="note">Ask what the rate covers for utilities, internet and laundry when you call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow">Looked after</span>
+          <h2>The house was renovated, not just repainted.</h2>
+          <p>New vinyl plank flooring, fresh paint, new interior doors, trim, blinds and light fittings run through the whole building, including the bathrooms and hallways.</p>
+        </div>
+        <div class="panel glass">
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Smoke alarms fitted in the rooms</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Camera covering the shared entry</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".32"/><path d="M7.5 12.4l3 3 6-6.6"/></svg><span>Every room has its own door and key</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="shots shots--solo">
+        <img src="img/photo_003.jpg" alt="The tiled walk-in shower room, with a glass block window and a new vanity.">
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Photos</span>
+        <h2>The whole house, room by room.</h2>
+        <p>Every photo below is of this building. Nothing here is a stock image.</p>
+      </div>
+      <div class="gal">
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_008.jpg" alt="A furnished room with a bed, desk and window."></button><figcaption>Room with desk and bed</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_001.jpg" alt="A room with a single bed, side table and chair."></button><figcaption>Room, made up and ready</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_005.jpg" alt="Galley kitchen with gas range and stainless fridge."></button><figcaption>Shared kitchen</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_002.jpg" alt="Dining area with tenant fridges and a work table."></button><figcaption>Dining and fridge area</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_004.jpg" alt="Sitting room with rattan sofa and chairs."></button><figcaption>First sitting room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_006.jpg" alt="Second lounge with rattan chairs and tiled floor."></button><figcaption>Second sitting room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_003.jpg" alt="Bathroom with a tiled walk-in shower and glass block window."></button><figcaption>Tiled shower room</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_007.jpg" alt="Separate toilet room with a bidet sprayer."></button><figcaption>Separate toilet</figcaption></figure>
+        <figure><button type="button" aria-label="Open larger photo"><img src="img/photo_009.jpg" alt="Dome security camera on the ceiling."></button><figcaption>Camera on the shared entry</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Moving in</span>
+        <h2>Three steps, and none of them involve buying furniture.</h2>
+      </div>
+      <div class="steps">
+        <div class="step glass">
+          <span class="num">1</span>
+          <h3>Call or text</h3>
+          <p>Tell us when you need a room and how long you want it for. Enquiries are answered up to midnight.</p>
+        </div>
+        <div class="step glass">
+          <span class="num">2</span>
+          <h3>Come and see it</h3>
+          <p>Walk the house, look at the rooms that are free, and check the kitchen and bathrooms for yourself.</p>
+        </div>
+        <div class="step glass">
+          <span class="num">3</span>
+          <h3>Move in</h3>
+          <p>The room is already furnished, so once the paperwork is signed you can move in straight away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Questions</span>
+        <h2>What people ask before they view a room.</h2>
+      </div>
+      <div class="faq glass">
+        <details open>
+          <summary>Is the room actually furnished?</summary>
+          <div class="ans">Yes. It comes with a bed frame and mattress, a desk and chair, blinds on the window, an overhead light and a smoke alarm, plus fridge space of your own in the common area. You do not need to buy or move furniture in.</div>
+        </details>
+        <details>
+          <summary>What do I share with the other people in the house?</summary>
+          <div class="ans">The kitchen, the two sitting rooms, the dining area, the shower room and the toilet. The shower and the toilet are separate rooms, so two people can get ready at the same time. Your own room has a door that closes.</div>
+        </details>
+        <details>
+          <summary>Can I see the room before I commit to anything?</summary>
+          <div class="ans">Yes, and you should. Call or text to arrange a time, walk the house, and look at the kitchen and bathrooms for yourself before you decide anything.</div>
+        </details>
+        <details>
+          <summary>How quickly could I move in?</summary>
+          <div class="ans">As soon as the paperwork is done. Because the room is already furnished, there is nothing to deliver or assemble first.</div>
+        </details>
+        <details>
+          <summary>What does the rent include, and is there parking?</summary>
+          <div class="ans">Ask when you call. Rates, what is covered for utilities, internet and laundry, and parking are all best confirmed directly, since they can differ from room to room.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Ask what's free this week.</h2>
+        <p>Rooms come up and go quickly. A call is the fastest way to find out what is open and to book a time to see it.</p>
+      </div>
+      <div class="contact">
+        <div class="card glass">
+          <div>
+            <span class="eyebrow">Call or text</span>
+            <div class="phone-num" id="phone">+1 343-997-2126</div>
+          </div>
+          <div class="phone-row">
+            <a class="btn btn--coral" href="tel:+13439972126">Call now</a>
+            <button class="btn btn--glass" type="button" id="copyPhone">Copy number</button>
+          </div>
+          <address class="addr">
+            <b>942 Howard Ave</b>
+            <span>Windsor, Ontario N9A 1S5</span>
+            <span>On Howard Avenue, one of the main routes in and out of downtown Windsor.</span>
+            <a href="https://www.google.com/maps/place/DAWN+PROPERTY+RESTORATION/@42.3128356,-83.0262241,17z/data=!3m1!4b1!4m6!3m5!1s0x883b2d4c3951a423:0x650d1899a01f093b!8m2!3d42.3128356!4d-83.0262241!16s%2Fg%2F11w1bytf_l">Open in Google Maps</a>
+          </address>
+        </div>
+
+        <div class="card glass">
+          <form id="enq">
+            <label for="f-name">Your name
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jordan Ifeanyi">
+            </label>
+            <label for="f-when">When do you need the room?
+              <input id="f-when" name="when" type="text" placeholder="Start of next month">
+            </label>
+            <label for="f-msg">Anything else we should know?
+              <textarea id="f-msg" name="msg" placeholder="How long you're staying, whether you work nights, questions about the house."></textarea>
+            </label>
+            <button class="btn btn--coral" type="submit">Write my enquiry</button>
+            <div class="out" id="out" hidden>
+              <p>Nothing has been sent. Copy the message below and text it to <strong>+1 343-997-2126</strong>, or just call the number.</p>
+              <pre id="outText"></pre>
+              <button class="btn btn--glass" type="button" id="copyMsg">Copy message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="callfab" href="#contact">Ask about a room</a>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <b>Dawn Property Restoration</b><br>
+      942 Howard Ave, Windsor, Ontario N9A 1S5<br>
+      +1 343-997-2126
+    </div>
+    <div class="fineprint">
+      Rooms and availability change week to week. Call to confirm what is open, what the rate is, and what it includes before you arrange to move in.
+      <br><br>
+      <span>Website concept prepared for Dawn Property Restoration. Every photograph is of this property. Rates, inclusions and availability are provisional and subject to the owner's confirmation.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function flash(btn, text) {
+    var old = btn.textContent;
+    btn.textContent = text;
+    setTimeout(function () { btn.textContent = old; }, 1600);
+  }
+  function select(text, btn) {
+    var id = btn.getAttribute("data-target");
+    var el = id ? document.getElementById(id) : null;
+    if (el && window.getSelection) {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      flash(btn, "Select and copy");
+    } else {
+      flash(btn, "Copy it manually");
+    }
+  }
+  function copy(text, btn) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { flash(btn, "Copied"); },
+        function () { select(text, btn); }
+      );
+    } else {
+      select(text, btn);
+    }
+  }
+
+  var cp = document.getElementById("copyPhone");
+  cp.setAttribute("data-target", "phone");
+  cp.addEventListener("click", function () {
+    copy(document.getElementById("phone").textContent.trim(), cp);
+  });
+
+  var form = document.getElementById("enq");
+  var out = document.getElementById("out");
+  var outText = document.getElementById("outText");
+  var cm = document.getElementById("copyMsg");
+  cm.setAttribute("data-target", "outText");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("f-name").value.trim();
+    var when = document.getElementById("f-when").value.trim();
+    var msg = document.getElementById("f-msg").value.trim();
+    var lines = ["Hello, I'm asking about a room at 942 Howard Ave."];
+    if (name) lines.push("My name is " + name + ".");
+    if (when) lines.push("I need a room from: " + when + ".");
+    if (msg) lines.push(msg);
+    lines.push("Could you let me know what's available and when I could come and see it?");
+    outText.textContent = lines.join("\n\n");
+    out.hidden = false;
+    out.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+
+  cm.addEventListener("click", function () { copy(outText.textContent, cm); });
+
+  /* ---- gallery lightbox ---- */
+  var figs = [].slice.call(document.querySelectorAll(".gal figure"));
+  var shots = figs.map(function (f) {
+    return {
+      src: f.querySelector("img").getAttribute("src"),
+      alt: f.querySelector("img").getAttribute("alt"),
+      cap: f.querySelector("figcaption").textContent
+    };
+  });
+  var lb = null, idx = 0, lastFocus = null;
+
+  function render() {
+    var im = lb.querySelector("img");
+    im.src = shots[idx].src;
+    im.alt = shots[idx].alt;
+    lb.querySelector(".lb-cap").textContent =
+      shots[idx].cap + "  (" + (idx + 1) + " of " + shots.length + ")";
+  }
+  function step(d) { idx = (idx + d + shots.length) % shots.length; render(); }
+  function close() {
+    if (!lb) return;
+    lb.remove(); lb = null;
+    document.removeEventListener("keydown", onKey);
+    if (lastFocus) lastFocus.focus();
+  }
+  function onKey(e) {
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") step(1);
+    else if (e.key === "ArrowLeft") step(-1);
+  }
+  function open(i, trigger) {
+    idx = i; lastFocus = trigger || null;
+    lb = document.createElement("div");
+    lb.className = "lb";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.setAttribute("aria-label", "Property photo");
+    lb.innerHTML =
+      '<img alt="">' +
+      '<div class="lb-bar">' +
+        '<button type="button" data-a="prev">Previous</button>' +
+        '<span class="lb-cap"></span>' +
+        '<button type="button" data-a="next">Next</button>' +
+        '<button type="button" data-a="close">Close</button>' +
+      '</div>';
+    lb.addEventListener("click", function (e) {
+      var a = e.target.getAttribute && e.target.getAttribute("data-a");
+      if (a === "prev") step(-1);
+      else if (a === "next") step(1);
+      else if (a === "close" || e.target === lb) close();
+    });
+    document.body.appendChild(lb);
+    render();
+    document.addEventListener("keydown", onKey);
+    lb.querySelector('[data-a="close"]').focus();
+  }
+
+  figs.forEach(function (f, i) {
+    f.querySelector("button").addEventListener("click", function (e) { open(i, e.currentTarget); });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dawn Property Restoration",
+  "telephone": "+1-343-997-2126",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "942 Howard Ave",
+    "addressLocality": "Windsor",
+    "addressRegion": "ON",
+    "postalCode": "N9A 1S5",
+    "addressCountry": "CA"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 42.3128356, "longitude": -83.0262241 }
+}
+</script>
