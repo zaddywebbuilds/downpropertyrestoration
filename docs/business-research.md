@@ -345,10 +345,10 @@ button beneath it.
 - The embed is the keyless Maps form, so there is no API key to manage or bill.
 - It is pinned to 42.3128356, -83.0262241, the coordinates from the business
   listing, and labelled with the street address, rather than left to a geocoder.
-- Get directions uses the cross platform  form, which opens the
+- Get directions uses the cross platform `maps/dir/?api=1` form, which opens the
   Maps app on Android and iOS and the web UI on desktop, with the route already
   started from wherever the visitor is.
-- A  was drafted and then removed. It had not been
+- A `destination_place_id` was drafted and then removed. It had not been
   verified against Google, and a wrong place id would route people to the wrong
   address. The street address alone is verified and is what the link uses.
 - The iframe is lazy loaded, so it costs nothing until a visitor scrolls to it.
