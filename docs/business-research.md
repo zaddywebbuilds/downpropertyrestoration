@@ -275,3 +275,24 @@ Remove the "Proposed services, to confirm" badge and the caption beneath the
 cards, and regenerate all six images individually at roughly 1200px wide. The
 pack README states these are contact sheet crops, so regeneration is the
 intended path, not upscaling.
+
+## 13. Revision 4: layout density
+
+- Section headings run as two columns on desktop, heading left and supporting
+  line right, so the right half of each heading row is no longer empty.
+- Band padding cut again, from a 3rem maximum to 2.3rem.
+- The services banner and cards now stretch to the full container width.
+- The FAQ panel fills the width; its answer text stays capped at 78 characters
+  so lines remain readable.
+- The hero caption card used to hang off the bottom-left corner of the photo,
+  half on and half off. It now sits fully inside the frame, inset from the edges.
+
+### Trade-off accepted
+
+Filling the width upscales the concept images about 1.23x: the banner runs
+930px native at 1148px, the service cards about 300px native at 371px. This was
+the explicit choice over leaving visible dead space. It renders acceptably, and
+regenerating those images at roughly 1200px wide removes the compromise.
+
+**The nine photographs of the house are not upscaled.** They are 1350-1800px
+native and never display above that.
