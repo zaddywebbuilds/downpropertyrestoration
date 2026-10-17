@@ -217,3 +217,61 @@ Current placement, one photo per slot:
 
 Desktop page height is now 6699px, down from 12851px before the spacing and
 cropping work. Mobile is 9186px, down from 18066px.
+
+## 12. Restoration imagery: what was used and what was not
+
+The concept pack was integrated into the existing page as a labelled
+"Restoration and renovation work" section, rather than a second page.
+
+The rule applied: **images that show work can go on a rental page; images that
+show a property cannot.** On a page letting a room, every photograph of a
+building reads as the building you would be renting. An illustrative exterior
+or a restored living room would imply that is the house, which no amount of
+small print fixes.
+
+### Used (7)
+
+| File | Shown at | Native | Placement |
+|---|---|---|---|
+| hero-restoration | 930px | 930x317 | Section banner |
+| water-damage | 282px | 305x233 | Service card |
+| fire-smoke | 282px | 302x233 | Service card |
+| mold-remediation | 282px | 305x233 | Service card |
+| storm-damage | 282px | 297x233 | Service card |
+| property-repairs | 282px | 299x233 | Service card |
+| equipment | 282px | 266x252 | Service card |
+
+Each is displayed at or below native width, so nothing is upscaled. On a high
+density screen the banner will still look soft, because 930px native is 1x.
+
+### Not used (8), with reasons
+
+| File | Reason |
+|---|---|
+| residential-exterior | Depicts a property. Would be read as the rental. |
+| commercial-exterior | Depicts a property, and no commercial offering is confirmed. |
+| closing-cta | A restored interior. Would be read as a room on offer. |
+| hero-exterior-alt | Same problem as residential-exterior. |
+| commercial-restoration | Commercial service unconfirmed; duplicated the repairs card. |
+| assessment | Weak at 240x252 next to the others; cut for consistency. |
+| before-room | See below. |
+| after-room | See below. |
+
+### The before/after pair cannot be used
+
+ is 180x252 and  is 158x252. Different aspect ratios,
+so they are not one room photographed twice from a fixed position. A comparison
+slider fed this pair either distorts the images or shows them misaligned.
+ also carries a vertical slice of a neighbouring frame along its
+left edge, visible at full size.
+
+A working slider was built and then removed along with the separate page. It
+can be restored in about ten minutes once a genuine matched pair exists: one
+room, one camera position, two moments.
+
+### If the owner confirms these services
+
+Remove the "Proposed services, to confirm" badge and the caption beneath the
+cards, and regenerate all six images individually at roughly 1200px wide. The
+pack README states these are contact sheet crops, so regeneration is the
+intended path, not upscaling.

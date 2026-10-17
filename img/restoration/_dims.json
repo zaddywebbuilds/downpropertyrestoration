@@ -1,0 +1,92 @@
+{
+ "hero-restoration": {
+  "w": 930,
+  "h": 317,
+  "safe_css_w": 930,
+  "kb": 68
+ },
+ "water-damage": {
+  "w": 305,
+  "h": 233,
+  "safe_css_w": 305,
+  "kb": 22
+ },
+ "fire-smoke": {
+  "w": 302,
+  "h": 233,
+  "safe_css_w": 302,
+  "kb": 23
+ },
+ "mold-remediation": {
+  "w": 305,
+  "h": 233,
+  "safe_css_w": 305,
+  "kb": 18
+ },
+ "storm-damage": {
+  "w": 297,
+  "h": 233,
+  "safe_css_w": 297,
+  "kb": 20
+ },
+ "property-repairs": {
+  "w": 299,
+  "h": 233,
+  "safe_css_w": 299,
+  "kb": 9
+ },
+ "commercial-restoration": {
+  "w": 353,
+  "h": 233,
+  "safe_css_w": 353,
+  "kb": 24
+ },
+ "assessment": {
+  "w": 240,
+  "h": 252,
+  "safe_css_w": 240,
+  "kb": 12
+ },
+ "equipment": {
+  "w": 266,
+  "h": 252,
+  "safe_css_w": 266,
+  "kb": 17
+ },
+ "residential-exterior": {
+  "w": 305,
+  "h": 252,
+  "safe_css_w": 305,
+  "kb": 21
+ },
+ "commercial-exterior": {
+  "w": 306,
+  "h": 252,
+  "safe_css_w": 306,
+  "kb": 20
+ },
+ "before-room": {
+  "w": 180,
+  "h": 252,
+  "safe_css_w": 180,
+  "kb": 11
+ },
+ "after-room": {
+  "w": 158,
+  "h": 252,
+  "safe_css_w": 158,
+  "kb": 4
+ },
+ "closing-cta": {
+  "w": 402,
+  "h": 252,
+  "safe_css_w": 402,
+  "kb": 28
+ },
+ "hero-exterior-alt": {
+  "w": 974,
+  "h": 317,
+  "safe_css_w": 974,
+  "kb": 101
+ }
+}
