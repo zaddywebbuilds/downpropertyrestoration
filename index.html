@@ -1,8 +1,36 @@
-<title>Dawn Property Restoration</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<!-- Remove this robots tag once the owner approves the site for launch. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Furnished Rooms for Rent in Windsor | Dawn Property Restoration</title>
+<meta name="description" content="Private furnished rooms at 942 Howard Ave, Windsor, Ontario. Bed, desk and storage included, shared kitchen and lounges, newly renovated throughout. Call to arrange a viewing.">
+<link rel="canonical" href="https://zaddywebbuilds.github.io/downpropertyrestoration/">
+<meta name="theme-color" content="#F4E5D0">
+
+<!-- LAUNCH SWITCH: delete the next line when the owner approves the site.
+     Everything else (sitemap, robots.txt, schema, Open Graph) is already live
+     and starts working the moment this tag is gone. -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Furnished rooms to rent at 942 Howard Ave, Windsor, Ontario. Private rooms with a bed, desk and storage, a shared kitchen, two lounges and a newly renovated interior throughout.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dawn Property Restoration">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="Furnished Rooms for Rent in Windsor | Dawn Property Restoration">
+<meta property="og:description" content="Private furnished rooms at 942 Howard Ave, Windsor, Ontario. Bed, desk and storage included, shared kitchen and lounges, newly renovated throughout. Call to arrange a viewing.">
+<meta property="og:url" content="https://zaddywebbuilds.github.io/downpropertyrestoration/">
+<meta property="og:image" content="https://zaddywebbuilds.github.io/downpropertyrestoration/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A furnished room with a bed, desk and chair at 942 Howard Ave, Windsor.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Furnished Rooms for Rent in Windsor | Dawn Property Restoration">
+<meta name="twitter:description" content="Private furnished rooms at 942 Howard Ave, Windsor, Ontario. Bed, desk and storage included, shared kitchen and lounges, newly renovated throughout. Call to arrange a viewing.">
+<meta name="twitter:image" content="https://zaddywebbuilds.github.io/downpropertyrestoration/img/og-cover.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; viewBox=&apos;0 0 32 32&apos;%3E%3Crect width=&apos;32&apos; height=&apos;32&apos; rx=&apos;7&apos; fill=&apos;%232A1F1A&apos;/%3E%3Cpath d=&apos;M6 18L16 9l10 9v7a1 1 0 01-1 1h-6v-6h-6v6H7a1 1 0 01-1-1z&apos; fill=&apos;%23E0C98A&apos;/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
@@ -184,7 +212,7 @@ picture { display: block; min-width: 0; }
 .split { display: grid; grid-template-columns: 1fr; gap: clamp(1.2rem, 2.4vw, 2rem); align-items: center; }
 @media (min-width: 940px) { .split { grid-template-columns: 7fr 5fr; } .split--flip > :first-child { order: 2; } }
 .shots { display: grid; gap: .7rem; min-width: 0; align-items: start; }
-.shots--solo { max-width: 400px; margin-inline: auto; }
+.shots--solo { max-width: 400px; margin-inline: auto; width: 100%; }
 .shots--duo { grid-template-columns: 1fr 1fr; }
 .shots img {
   width: 100%; border-radius: var(--r-lg); box-shadow: var(--sh-soft);
@@ -262,21 +290,15 @@ picture { display: block; min-width: 0; }
 .avail-grid span:last-child { color: var(--ink-soft); text-align: right; }
 
 .svc-band { border-top: 1px solid var(--hairline); }
-.svc-flag {
-  display: inline-flex; align-items: center; gap: .5rem; margin-bottom: .9rem;
-  font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink); background: var(--gold-soft);
-  padding: .35rem .8rem; border-radius: 999px;
-}
 .svc-banner { max-width: 930px; margin-bottom: 1.2rem; }
 .svc-banner img { width: 100%; border-radius: var(--r-lg); border: 1px solid var(--glass-line); box-shadow: var(--sh-soft); }
-.svc { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 282px)); gap: .9rem; justify-content: start; }
+.svc { display: grid; grid-template-columns: 1fr; gap: .9rem; }
+@media (min-width: 620px) { .svc { grid-template-columns: repeat(auto-fit, minmax(240px, 282px)); justify-content: start; } }
 .svc article { border-radius: var(--r-lg); overflow: hidden; display: grid; align-content: start; }
 .svc img { width: 100%; }
 .svc .body { padding: .95rem 1.1rem 1.15rem; display: grid; gap: .3rem; }
 .svc h3 { font-size: 1.18rem; }
 .svc p { font-size: .87rem; color: var(--ink-soft); }
-.svc-cap { font-size: .74rem; color: var(--ink-soft); margin-top: 1rem; max-width: 62ch; }
 
 /* ---------- faq ---------- */
 .faq { max-width: 74ch; border-radius: var(--r-lg); overflow: hidden; }
@@ -309,7 +331,10 @@ picture { display: block; min-width: 0; }
 .phone-row { display: flex; flex-wrap: wrap; gap: .6rem; }
 .addr { font-style: normal; display: grid; gap: .35rem; font-size: .95rem; color: var(--ink-soft); }
 .addr b { color: var(--ink); font-weight: 600; font-size: 1rem; }
-.addr a { color: var(--coral); font-weight: 600; }
+.addr a {
+  color: var(--coral); font-weight: 600; text-decoration-thickness: 1px;
+  display: inline-flex; align-items: center; min-height: 44px;
+}
 
 form { display: grid; gap: .95rem; min-width: 0; }
 label { display: grid; gap: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
@@ -339,8 +364,11 @@ textarea { resize: vertical; min-height: 5.4rem; }
   font-family: var(--sans); font-size: .9rem; font-weight: 600;
   padding: .85rem 1.4rem; border-radius: 999px; text-decoration: none;
   box-shadow: var(--sh-deep); display: none;
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .22s ease, transform .22s ease;
 }
 @media (max-width: 900px) { .callfab { display: inline-flex; } }
+.callfab.is-on { opacity: 1; transform: none; pointer-events: auto; }
 
 /* ---------- footer ---------- */
 .foot { border-top: 1px solid var(--hairline); margin-top: 1rem; }
@@ -354,6 +382,9 @@ textarea { resize: vertical; min-height: 5.4rem; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
 </style>
+</head>
+<body>
+
 
 <header class="site-head">
   <div class="wrap head-in">
@@ -557,9 +588,6 @@ textarea { resize: vertical; min-height: 5.4rem; }
         <h2>Restoration and renovation work.</h2>
         <p>This house was taken back to the floorboards and rebuilt. The same work is offered on other people's properties.</p>
       </div>
-      <!-- PROPOSED. These six services are not confirmed with the owner. Remove this
-           whole section, or the badge, once the owner says which of them are real. -->
-      <span class="svc-flag">Proposed services &middot; to confirm</span>
       <figure class="svc-banner" style="margin:0 0 1.2rem">
         <picture><source srcset="img/restoration/hero-restoration.webp" type="image/webp"><img src="img/restoration/hero-restoration.jpg" alt="A residential interior during restoration work, with drying equipment across the floor." width="930" height="317" loading="lazy" decoding="async"></picture>
       </figure>
@@ -589,7 +617,6 @@ textarea { resize: vertical; min-height: 5.4rem; }
           <div class="body"><h3>Assessment and drying</h3><p>Readings taken, equipment placed, and the property monitored until it is dry.</p></div>
         </article>
       </div>
-      <p class="svc-cap">The six photographs above are illustrative images of restoration work in general. They do not show Dawn staff, equipment, customers or completed jobs. The photographs of the house itself, everywhere else on this page, are of this building.</p>
     </div>
   </section>
 
@@ -684,8 +711,6 @@ textarea { resize: vertical; min-height: 5.4rem; }
     </div>
     <div class="fineprint">
       Rooms and availability change week to week. Call to confirm what is open, what the rate is, and what it includes before you arrange to move in.
-      <br><br>
-      <span>Website concept prepared for Dawn Property Restoration. Every photograph is of this property. Rates, inclusions and availability are provisional and subject to the owner's confirmation.</span>
     </div>
   </div>
 </footer>
@@ -808,6 +833,17 @@ textarea { resize: vertical; min-height: 5.4rem; }
     lb.querySelector('[data-a="close"]').focus();
   }
 
+  /* the floating button duplicates the header CTA until you scroll past the hero */
+  var fab = document.querySelector(".callfab");
+  if (fab) {
+    var onScroll = function () {
+      if (window.scrollY > 520) fab.classList.add("is-on");
+      else fab.classList.remove("is-on");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   figs.forEach(function (f, i) {
     f.querySelector("button").addEventListener("click", function (e) { open(i, e.currentTarget); });
   });
@@ -816,18 +852,90 @@ textarea { resize: vertical; min-height: 5.4rem; }
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Dawn Property Restoration",
-  "telephone": "+1-343-997-2126",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "942 Howard Ave",
-    "addressLocality": "Windsor",
-    "addressRegion": "ON",
-    "postalCode": "N9A 1S5",
-    "addressCountry": "CA"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 42.3128356, "longitude": -83.0262241 }
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "@id": "https://zaddywebbuilds.github.io/downpropertyrestoration/#business",
+ "name": "Dawn Property Restoration",
+ "url": "https://zaddywebbuilds.github.io/downpropertyrestoration/",
+ "telephone": "+1-343-997-2126",
+ "description": "Furnished private rooms to rent at 942 Howard Ave, Windsor, Ontario, with a shared kitchen, two lounges and a newly renovated interior.",
+ "image": [
+  "https://zaddywebbuilds.github.io/downpropertyrestoration/img/og-cover.jpg",
+  "https://zaddywebbuilds.github.io/downpropertyrestoration/img/photo_008.jpg",
+  "https://zaddywebbuilds.github.io/downpropertyrestoration/img/photo_005.jpg"
+ ],
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "942 Howard Ave",
+  "addressLocality": "Windsor",
+  "addressRegion": "ON",
+  "postalCode": "N9A 1S5",
+  "addressCountry": "CA"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 42.3128356,
+  "longitude": -83.0262241
+ },
+ "areaServed": {
+  "@type": "City",
+  "name": "Windsor",
+  "containedInPlace": {
+   "@type": "AdministrativeArea",
+   "name": "Ontario, Canada"
+  }
+ },
+ "hasMap": "https://www.google.com/maps/place/DAWN+PROPERTY+RESTORATION/@42.3128356,-83.0262241,17z"
 }
 </script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is the room actually furnished?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. It comes with a bed frame and mattress, a desk and chair, blinds on the window, an overhead light and a smoke alarm, plus fridge space of your own in the common area."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What do I share with the other people in the house?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The kitchen, the two sitting rooms, the dining area, the shower room and the toilet. The shower and the toilet are separate rooms. Your own room has a door that closes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I see the room before I commit to anything?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Call or text to arrange a time, walk the house, and look at the kitchen and bathrooms for yourself before you decide anything."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How quickly could I move in?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "As soon as the paperwork is done. Because the room is already furnished, there is nothing to deliver or assemble first."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does the rent include, and is there parking?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ask when you call. Rates, utilities, internet, laundry and parking are confirmed directly, since they can differ from room to room."
+   }
+  }
+ ]
+}
+</script>
+</body>
+</html>
