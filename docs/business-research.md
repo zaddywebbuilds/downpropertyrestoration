@@ -259,10 +259,10 @@ density screen the banner will still look soft, because 930px native is 1x.
 
 ### The before/after pair cannot be used
 
- is 180x252 and  is 158x252. Different aspect ratios,
+`before-room` is 180x252 and `after-room` is 158x252. Different aspect ratios,
 so they are not one room photographed twice from a fixed position. A comparison
 slider fed this pair either distorts the images or shows them misaligned.
- also carries a vertical slice of a neighbouring frame along its
+`before-room` also carries a vertical slice of a neighbouring frame along its
 left edge, visible at full size.
 
 A working slider was built and then removed along with the separate page. It
