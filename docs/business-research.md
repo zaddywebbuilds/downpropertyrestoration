@@ -121,3 +121,47 @@ these could be verified, so none appear.
   a renter looking at a rooming house will want. Worth asking for.
 - **Single page.** For one house with nine photos this is the right shape. Service
   pages would be mostly empty. If they add properties, it should become multi-page.
+
+## 8. Deployment
+
+Live at **https://zaddywebbuilds.github.io/downpropertyrestoration/**
+(GitHub Pages, served from `main` at the repository root.)
+
+Note the repository is spelled `downpropertyrestoration`. The business is
+`Dawn`. Worth renaming before this URL is given to the owner or printed
+anywhere, since "down property restoration" reads badly for a property business.
+
+Render-checked headless at 1440px and 390px: no horizontal overflow at either
+width, all 15 image references load, Cormorant Garamond and Inter both resolve,
+and no console errors.
+
+## 9. The AI image concept pack
+
+A zip of 15 AI-generated restoration images was supplied
+(`DAWN_Restoration_Image_Concept_Pack.zip`). **None of it was used**, for two
+independent reasons.
+
+**It is the wrong business.** The set covers water damage, fire and smoke,
+mould remediation, storm damage and restoration equipment. This business rents
+furnished rooms. Showing a prospective tenant a crew extracting floodwater
+would not describe anything the company sells.
+
+**It is technically unusable regardless of positioning.** The pack's own
+README states the files are crops from a single contact sheet rather than
+independent generations. Measured dimensions:
+
+| File | Pixels | Needed |
+|---|---|---|
+| 01_homepage_hero | 930 x 317 | ~2400px wide for a hero |
+| service images (02-11) | about 300 x 240 | ~1200px |
+| 12_before_room | 180 x 252 | pair must match |
+| 13_after_room | 158 x 252 | pair must match |
+
+The before/after pair cannot drive a comparison slider: the two frames are
+different aspect ratios, so they are not the same room from the same camera
+position. `12_before_room.jpg` also has a vertical slice of a neighbouring
+image bleeding in along its left edge, which is visible at full size.
+
+The nine real photographs of the actual property are higher resolution
+(1800px long edge), genuinely show what is being rented, and cost nothing in
+credibility. They remain the better asset.
