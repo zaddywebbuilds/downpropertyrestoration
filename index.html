@@ -353,10 +353,13 @@ picture { display: block; min-width: 0; }
 .phone-row { display: flex; flex-wrap: wrap; gap: .6rem; }
 .addr { font-style: normal; display: grid; gap: .35rem; font-size: .95rem; color: var(--ink-soft); }
 .addr b { color: var(--ink); font-weight: 600; font-size: 1rem; }
-.addr a {
-  color: var(--coral); font-weight: 600; text-decoration-thickness: 1px;
-  display: inline-flex; align-items: center; min-height: 44px;
+.map {
+  border-radius: var(--r-md); overflow: hidden;
+  border: 1px solid var(--glass-line); box-shadow: var(--sh-soft);
+  background: rgba(255,255,255,.5);
 }
+.map iframe { display: block; width: 100%; height: 100%; border: 0; aspect-ratio: 16 / 11; }
+@media (max-width: 520px) { .map iframe { aspect-ratio: 4 / 3; } }
 
 form { display: grid; gap: .95rem; min-width: 0; }
 label { display: grid; gap: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
@@ -695,8 +698,20 @@ textarea { resize: vertical; min-height: 5.4rem; }
             <b>942 Howard Ave</b>
             <span>Windsor, Ontario N9A 1S5</span>
             <span>On Howard Avenue, one of the main routes in and out of downtown Windsor.</span>
-            <a href="https://www.google.com/maps/place/DAWN+PROPERTY+RESTORATION/@42.3128356,-83.0262241,17z/data=!3m1!4b1!4m6!3m5!1s0x883b2d4c3951a423:0x650d1899a01f093b!8m2!3d42.3128356!4d-83.0262241!16s%2Fg%2F11w1bytf_l">Open in Google Maps</a>
           </address>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m12!1m8!1m3!1d2950.3919850006882!2d-83.0262241!3d42.3128356!3m2!1i1024!2i768!4f13.1!2m1!1s942+Howard+Ave,+Windsor,+ON+N9A+1S5!6i17"
+              title="Map showing 942 Howard Ave, Windsor, Ontario"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+          <div class="phone-row">
+            <a class="btn btn--coral" href="https://www.google.com/maps/dir/?api=1&amp;destination=942+Howard+Ave%2C+Windsor%2C+ON+N9A+1S5" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn--glass" href="https://www.google.com/maps/place/DAWN+PROPERTY+RESTORATION/@42.3128356,-83.0262241,17z/data=!3m1!4b1!4m6!3m5!1s0x883b2d4c3951a423:0x650d1899a01f093b!8m2!3d42.3128356!4d-83.0262241!16s%2Fg%2F11w1bytf_l" target="_blank" rel="noopener">View the listing</a>
+          </div>
         </div>
 
         <div class="card glass">
